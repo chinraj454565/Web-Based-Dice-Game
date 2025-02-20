@@ -1,0 +1,97 @@
+@media (max-width: 544px) {
+  html {
+    font-size: 50%;
+  }
+  /* Main layout adjustments */
+  main {
+    flex-direction: column; /* Stack players */
+    height: auto;
+    width: 100%; /* Fit within the screen */
+    padding: 1rem;
+    height: 100%;
+  }
+
+  /* Player sections */
+  .player {
+    display: none; /* Hide players by default */
+    padding: 5rem 2rem;
+    flex: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    height: 95vh;
+  }
+
+  .player--active {
+    display: flex; /* Show only the active player */
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .player:not(.player--active) {
+    opacity: 0;
+    transform: scale(
+      0.95
+    ); /* Slightly shrink inactive players for a smoother transition */
+  }
+
+  /* Font and size adjustments */
+  .score {
+    font-size: 6rem; /* Smaller score text */
+  }
+
+  .name {
+    font-size: 3rem; /* Smaller player name */
+  }
+
+  .current {
+    width: 70%;
+    padding: 1.5rem;
+    position: absolute;
+    top: 80%;
+  }
+
+  .current-score {
+    font-size: 2.5rem; /* Adjust current score size */
+  }
+
+  /* Dice styling */
+  .dice {
+    height: 15%; /* Smaller dice */
+    margin-top: 2rem;
+    top: 40%;
+    left: auto;
+    right: 40%;
+    transform: translateX(50%);
+    transform: translateY(-50%);
+  }
+
+  /* Buttons */
+  .btn {
+    font-size: 1.5rem; /* Smaller button text */
+    padding: 0.5rem 1rem;
+    position: absolute;
+    margin: 1rem auto;
+    display: block;
+    /* width: 50%; */
+    justify-items: center;
+  }
+
+  .btn--new {
+    top: 0;
+    left: 8rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .btn--roll {
+    top: auto;
+    bottom: 20px;
+    left: auto;
+    right: 15%;
+  }
+
+  .btn--hold {
+    top: auto;
+    bottom: 20px;
+    /* right: auto; */
+    left: 40%;
+  }
+}
