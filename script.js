@@ -7,6 +7,7 @@ const startBtn = document.getElementById('start-btn');
 const popupForm = document.getElementById('popup-form');
 const gameSetupForm = document.getElementById('game-setup-form');
 const main = document.querySelector('main');
+const startMusic = new Audio('game-bonus-144751.mp3');
 
 // Default Player Names and Winning Score
 let player1Name = 'Player 1';
@@ -15,6 +16,7 @@ let winningScore = 30;
 
 // Function to show popup form
 const showPopup = () => {
+  startMusic.play();
   overlay.style.display = 'none'; // Hide start overlay
   popupForm.classList.remove('hidden'); // Show popup form
   main.classList.add('blur'); // Blur background

@@ -22,6 +22,16 @@ body {
   justify-content: center;
 }
 
+.soundButton {
+  font-size: 30px;
+  display: block;
+  color: #c7365f;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  z-index: 100;
+}
+
 /* LAYOUT */
 main {
   position: relative;
